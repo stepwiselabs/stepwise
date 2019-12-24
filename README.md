@@ -1,2 +1,2 @@
 # stepwise
-extensible workflow application
+extensible workflow framework
