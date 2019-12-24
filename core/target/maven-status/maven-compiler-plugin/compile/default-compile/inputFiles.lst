@@ -1,0 +1,10 @@
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/Preconditions.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/exceptions/ValidationException.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/Immutables.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/SerializerFactory.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/exceptions/StateException.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/Strings.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/Serializer.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/CollectionUtil.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/exceptions/AppException.java
+/home/sterrasi/me/stepwiselabs/git/stepwise/core/src/main/java/com/stepwiselabs/stately/core/exceptions/SerializationException.java

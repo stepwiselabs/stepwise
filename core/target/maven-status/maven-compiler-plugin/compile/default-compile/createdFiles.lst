@@ -1,0 +1,11 @@
+com/stepwiselabs/stately/core/exceptions/SerializationException.class
+com/stepwiselabs/stately/core/Serializer$JacksonSerializer.class
+com/stepwiselabs/stately/core/Immutables.class
+com/stepwiselabs/stately/core/Preconditions.class
+com/stepwiselabs/stately/core/Serializer.class
+com/stepwiselabs/stately/core/SerializerFactory.class
+com/stepwiselabs/stately/core/Strings.class
+com/stepwiselabs/stately/core/exceptions/StateException.class
+com/stepwiselabs/stately/core/CollectionUtil.class
+com/stepwiselabs/stately/core/exceptions/ValidationException.class
+com/stepwiselabs/stately/core/exceptions/AppException.class

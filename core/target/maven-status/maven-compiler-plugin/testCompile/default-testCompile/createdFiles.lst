@@ -1,0 +1,7 @@
+com/stepwiselabs/stately/core/SerializerTest$ParameterizedObject.class
+com/stepwiselabs/stately/core/SerializerTest$ObjectWithAnnotatedConstructor.class
+com/stepwiselabs/stately/core/SerializerTest$ObjectWithParameterizedList.class
+com/stepwiselabs/stately/core/SerializerTest$Exclusivity.class
+com/stepwiselabs/stately/core/SerializerTest.class
+com/stepwiselabs/stately/core/SerializerTest$ObjectWithEnum.class
+com/stepwiselabs/stately/core/SerializerTest$Person.class
