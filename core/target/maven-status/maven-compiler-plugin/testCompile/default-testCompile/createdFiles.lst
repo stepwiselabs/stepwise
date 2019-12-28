@@ -1,7 +1,0 @@
-org/stepwiselabs/core/SerializerTest.class
-org/stepwiselabs/core/SerializerTest$ObjectWithParameterizedList.class
-org/stepwiselabs/core/SerializerTest$ParameterizedObject.class
-org/stepwiselabs/core/SerializerTest$ObjectWithAnnotatedConstructor.class
-org/stepwiselabs/core/SerializerTest$Person.class
-org/stepwiselabs/core/SerializerTest$Exclusivity.class
-org/stepwiselabs/core/SerializerTest$ObjectWithEnum.class
