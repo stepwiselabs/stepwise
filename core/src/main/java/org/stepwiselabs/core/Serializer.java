@@ -1,10 +1,10 @@
-package com.stepwiselabs.stately.core;
+package org.stepwiselabs.core;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
-import com.stepwiselabs.stately.core.exceptions.SerializationException;
+import org.stepwiselabs.core.exceptions.SerializationException;
 
 import java.io.InputStream;
 import java.util.Arrays;

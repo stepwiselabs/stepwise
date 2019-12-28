@@ -1,4 +1,4 @@
-package com.stepwiselabs.stately.core.exceptions;
+package org.stepwiselabs.core.exceptions;
 
 /**
  * Exception that occurs when transforming an object to a persistent format.

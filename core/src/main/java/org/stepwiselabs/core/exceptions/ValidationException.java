@@ -1,4 +1,4 @@
-package com.stepwiselabs.stately.core.exceptions;
+package org.stepwiselabs.core.exceptions;
 
 public class ValidationException extends AppException {
 

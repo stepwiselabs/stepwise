@@ -1,9 +1,6 @@
-package com.stepwiselabs.stately.core;
+package org.stepwiselabs.core;
 
 import java.util.*;
-
-import static com.stepwiselabs.stately.core.Preconditions.checkNotEmpty;
-import static com.stepwiselabs.stately.core.Preconditions.checkNotNull;
 
 
 /**
@@ -59,8 +56,8 @@ public class CollectionUtil {
     }
 
     public static String join( final Collection<?> values, String separator ){
-        checkNotEmpty(values,"values");
-        checkNotNull(separator, "separator");
+        Preconditions.checkNotEmpty(values,"values");
+        Preconditions.checkNotNull(separator, "separator");
 
         StringBuilder sb = new StringBuilder();
         for ( Object obj : values ){
@@ -78,7 +75,7 @@ public class CollectionUtil {
      * @return An immutable {@link Map}
      */
     public static <K, V> Map<K,V> toImmutable(Map<K,V> map){
-        checkNotNull(map, "map" );
+        Preconditions.checkNotNull(map, "map" );
         Map<K,V> clone = new HashMap<>();
         clone.putAll(map);
         return Collections.unmodifiableMap(map);
@@ -90,7 +87,7 @@ public class CollectionUtil {
      * @return An immutable {@link List}
      */
     public static <T> List<T> toImmutable(List<T> list){
-        checkNotNull(list, "list" );
+        Preconditions.checkNotNull(list, "list" );
         List<T> clone = new ArrayList<>();
         clone.addAll(list);
         return Collections.unmodifiableList(list);

@@ -2,19 +2,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.stepwiselabs</groupId>
-        <artifactId>stately</artifactId>
+        <groupId>org.stepwiselabs</groupId>
+        <artifactId>stepwise-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>stately-core</artifactId>
+    <artifactId>stepwise-core</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>stately-core</name>
+    <name>stepwise-core</name>
 
     <packaging>jar</packaging>
-    <url>http://maven.apache.org</url>
+    <url>http://www.stepwiselabs.org</url>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     </properties>
 

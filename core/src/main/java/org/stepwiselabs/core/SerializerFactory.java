@@ -1,4 +1,4 @@
-package com.stepwiselabs.stately.core;
+package org.stepwiselabs.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
