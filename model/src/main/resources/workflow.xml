@@ -1,0 +1,44 @@
+<!-- the subject that flows through the workflow is the order that has failed review -->
+<!-- issue security groups do not exist.  Viewing a type of issue is a permission granted to a group (more flexible) -->
+
+<!--
+  subject
+    status = a enumerated higher level state.  ex: new,in-review,resolved
+  o. workflows have states
+  o. a workflow instance is in a single state
+  o. the workflow cannot transition to a new state unless a workflow level or state level action is invoked
+-->
+
+<workflow-definition name="WORKFLOW_1">
+
+    <state-definition name="Awaiting Data">
+        <description>
+            An intermediate state created when an order is published in the system.
+            When the manual review case is fully defined the order will transition to the 'New' state.
+        </description>
+
+        <!-- action to put the order in first review -->
+        <actions>
+            <action name="Review" roles="Reviewer">
+                <!-- a predicate -->
+                <script-condition language="groovy">
+                    <![CDATA[
+                        issue.hasGeometry === true
+                    ]]>
+                </script-condition>
+            </action>
+            <action name="Archive"
+                    roles="">
+
+            </action>
+        </actions>
+    </state-definition>
+
+    <state-definition name="New">
+        <description>
+            The state of a newly created order. It is visible by only the reviewers in the group it was assigned to.
+        </description>
+
+    </state-definition>
+
+</workflow-definition>

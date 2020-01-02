@@ -1,24 +1,16 @@
 package org.stepwiselabs.core.exceptions;
 
+import java.util.Map;
+
 public class ValidationException extends AppException {
 
     private static final long serialVersionUID = -3042686053652247285L;
-    private final Object subject;
 
     /**
      * {@inheritDoc AppException#AppException(String, Object...)}
      */
     public ValidationException(String format, Object... args) {
         super(format, args);
-        this.subject = null;
-    }
-
-    /**
-     * {@inheritDoc AppException#AppException(String, Object...)}
-     */
-    public ValidationException(Object subject, String format, Object... args) {
-        super(format, args);
-        this.subject = subject;
     }
 
     /**
@@ -26,18 +18,21 @@ public class ValidationException extends AppException {
      */
     public ValidationException(Throwable cause, String format, Object... args) {
         super(cause, format, args);
-        this.subject = null;
     }
 
-    /**
-     * {@inheritDoc AppException#AppException(Throwable, String, Object...) }
-     */
-    public ValidationException(Object subject, Throwable cause, String format, Object... args) {
-        super(cause, format, args);
-        this.subject = subject;
+    private ValidationException(Throwable cause, Map<String, String> params, String format, Object... args) {
+        super(cause, params, format, args);
     }
 
-    public Object getSubject(){
-        return subject;
+    public static ValidationException create(String format, Object... args) {
+        return new ValidationException(format, args);
+    }
+
+    public static ValidationException create(Throwable t, String format, Object... args) {
+        return new ValidationException(t, format, args);
+    }
+
+    public static ExceptionBuilder build(final String format, final Object... args) {
+        return new ExceptionBuilder<ValidationException>((cause, params) -> new ValidationException(cause, params, format, args));
     }
 }

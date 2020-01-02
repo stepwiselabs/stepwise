@@ -1,0 +1,4 @@
+1. create a file/classpath resource agnostic resource reader
+2. write Configuration test
+3. Use dagger to provide the configuration
+4. close others keystrone to Alt-SHIFT-W
