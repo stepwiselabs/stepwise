@@ -3,6 +3,8 @@ package org.stepwiselabs.core.resource;
 import org.stepwiselabs.core.exceptions.ResourceAccessException;
 
 import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 class ClasspathReadableResource extends AbstractReadableResource {
@@ -41,4 +43,17 @@ class ClasspathReadableResource extends AbstractReadableResource {
         return location.startsWith(CLASSPATH_PREFIX) ? location.substring(CLASSPATH_PREFIX.length()) : location;
     }
 
+    @Override
+    public ReadableResource resolve(String relativePath) {
+
+        Path path = Paths.get(stripClasspath(location)).resolveSibling(relativePath);
+        return new ClasspathReadableResource(CLASSPATH_PREFIX + path.toString());
+    }
+
+    @Override
+    public ReadableResource resolve(Path relativePath) {
+
+        Path path = Paths.get(stripClasspath(location)).resolveSibling(relativePath);
+        return new ClasspathReadableResource(CLASSPATH_PREFIX + path.toString());
+    }
 }

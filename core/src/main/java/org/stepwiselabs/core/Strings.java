@@ -1,8 +1,10 @@
 package org.stepwiselabs.core;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
+import org.stepwiselabs.core.exceptions.ResourceAccessException;
+
+import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Static utility methods related to {@link java.lang.String strings}.
@@ -35,6 +37,29 @@ public final class Strings {
         return true;
     }
 
+    /**
+     * Reads the contents of the provided {@link InputStream} into a String. The
+     * {@link InputStream} does not get closed.
+     * @param in - The {@link InputStream} to read from
+     *
+     * @return The contents from the {@link InputStream} as a {@link String}.
+     * @throws ResourceAccessException when there is an IO error while reading
+     */
+    public static String readContents(InputStream in){
+
+        StringBuilder textBuilder = new StringBuilder();
+        try (Reader reader = new BufferedReader(new InputStreamReader
+                (in, Charset.forName(StandardCharsets.UTF_8.name())))) {
+            int c = 0;
+            while ((c = reader.read()) != -1) {
+                textBuilder.append((char) c);
+            }
+            return textBuilder.toString();
+
+        } catch( IOException e ){
+            throw new ResourceAccessException(e, e.getMessage());
+        }
+    }
 
     /**
      * Converts a {@link String} to an {@link InputStream}.

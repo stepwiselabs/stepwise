@@ -23,10 +23,14 @@ public class ReadableResourceLoader {
         if (Strings.isBlank(location)) {
             throw new IllegalArgumentException("resource location is required");
         }
-
         return location.startsWith(CLASSPATH_PREFIX) ?
                 loadClasspathLocation(location) :
                 loadFileLocation(Paths.get(location));
+    }
+
+    public static String readContents(String location) {
+
+        return load(location).withResource( in -> Strings.readContents(in));
     }
 
     private static ReadableResource loadClasspathLocation(String location) {
