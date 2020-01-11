@@ -87,6 +87,7 @@ public class AppException extends RuntimeException {
 
     /**
      * Returns any parameters that were associated with this exception
+     *
      * @return a {@link Map} of associated parameters
      */
     public Map<String, String> getParams() {

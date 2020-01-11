@@ -5,8 +5,6 @@ import org.stepwiselabs.core.exceptions.ResourceAccessException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -53,7 +51,7 @@ abstract class AbstractReadableResource implements ReadableResource {
     }
 
     @Override
-    public String readContents(){
+    public String readContents() {
         return withResource(in -> Strings.readContents(in));
     }
 }

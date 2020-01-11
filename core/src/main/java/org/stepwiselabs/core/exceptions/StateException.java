@@ -24,11 +24,11 @@ public class StateException extends AppException {
         super(cause, params, format, args);
     }
 
-    public static StateException create(String format, Object ... args){
+    public static StateException create(String format, Object... args) {
         return new StateException(format, args);
     }
 
-    public static StateException create(Throwable t, String format, Object ... args){
+    public static StateException create(Throwable t, String format, Object... args) {
         return new StateException(t, format, args);
     }
 

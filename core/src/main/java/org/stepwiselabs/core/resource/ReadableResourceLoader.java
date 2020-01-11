@@ -30,7 +30,7 @@ public class ReadableResourceLoader {
 
     public static String readContents(String location) {
 
-        return load(location).withResource( in -> Strings.readContents(in));
+        return load(location).withResource(in -> Strings.readContents(in));
     }
 
     private static ReadableResource loadClasspathLocation(String location) {

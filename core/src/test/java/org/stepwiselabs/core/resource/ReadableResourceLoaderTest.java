@@ -21,7 +21,7 @@ public class ReadableResourceLoaderTest {
     private static final String SUB_CONTENTS = "Hello Sub Dir Readable!";
 
     @Test
-    public void resourceExists(){
+    public void resourceExists() {
         readableFile.toFile().exists();
     }
 

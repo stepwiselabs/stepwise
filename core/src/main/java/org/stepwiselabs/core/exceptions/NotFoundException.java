@@ -4,7 +4,6 @@ import java.util.Map;
 
 /**
  * Exception that occurs when an expected entity could not be found
- *
  */
 public class NotFoundException extends AppException {
 
@@ -28,11 +27,11 @@ public class NotFoundException extends AppException {
         super(cause, params, format, args);
     }
 
-    public static NotFoundException create(String format, Object ... args){
+    public static NotFoundException create(String format, Object... args) {
         return new NotFoundException(format, args);
     }
 
-    public static NotFoundException create(Throwable t, String format, Object ... args){
+    public static NotFoundException create(Throwable t, String format, Object... args) {
         return new NotFoundException(t, format, args);
     }
 

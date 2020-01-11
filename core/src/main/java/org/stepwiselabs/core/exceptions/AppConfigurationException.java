@@ -4,7 +4,6 @@ import java.util.Map;
 
 /**
  * Exception that occurs when a required application configuration parameter was not specified or is invalid
- *
  */
 public class AppConfigurationException extends AppException {
 
@@ -28,11 +27,11 @@ public class AppConfigurationException extends AppException {
         super(cause, params, format, args);
     }
 
-    public static AppConfigurationException create(String format, Object ... args){
+    public static AppConfigurationException create(String format, Object... args) {
         return new AppConfigurationException(format, args);
     }
 
-    public static AppConfigurationException create(Throwable t, String format, Object ... args){
+    public static AppConfigurationException create(Throwable t, String format, Object... args) {
         return new AppConfigurationException(t, format, args);
     }
 

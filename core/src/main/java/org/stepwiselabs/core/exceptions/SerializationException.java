@@ -4,7 +4,6 @@ import java.util.Map;
 
 /**
  * Exception that occurs when transforming an object to a persistent format.
- *
  */
 public class SerializationException extends AppException {
 
@@ -28,11 +27,11 @@ public class SerializationException extends AppException {
         super(cause, params, format, args);
     }
 
-    public static SerializationException create(String format, Object ... args){
+    public static SerializationException create(String format, Object... args) {
         return new SerializationException(format, args);
     }
 
-    public static SerializationException create(Throwable t, String format, Object ... args){
+    public static SerializationException create(Throwable t, String format, Object... args) {
         return new SerializationException(t, format, args);
     }
 

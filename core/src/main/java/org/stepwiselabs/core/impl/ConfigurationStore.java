@@ -25,7 +25,7 @@ public class ConfigurationStore {
     public Optional<ConfigurationStore> getConfig(String prefix) {
 
         String newPrefix = getPrefixKey(prefix);
-        boolean hasKeys = props.keySet().stream().anyMatch(k -> ((String)k).startsWith(newPrefix));
+        boolean hasKeys = props.keySet().stream().anyMatch(k -> ((String) k).startsWith(newPrefix));
         return hasKeys ? Optional.of(new ConfigurationStore(newPrefix, props)) : Optional.empty();
     }
 

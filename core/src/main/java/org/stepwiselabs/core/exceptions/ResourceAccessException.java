@@ -4,7 +4,6 @@ import java.util.Map;
 
 /**
  * Exception that occurs when there is an error in the processing of a resource.
- *
  */
 public class ResourceAccessException extends AppException {
 
@@ -28,11 +27,11 @@ public class ResourceAccessException extends AppException {
         super(cause, params, format, args);
     }
 
-    public static ResourceAccessException create(String format, Object ... args){
+    public static ResourceAccessException create(String format, Object... args) {
         return new ResourceAccessException(format, args);
     }
 
-    public static ResourceAccessException create(Throwable t, String format, Object ... args){
+    public static ResourceAccessException create(Throwable t, String format, Object... args) {
         return new ResourceAccessException(t, format, args);
     }
 

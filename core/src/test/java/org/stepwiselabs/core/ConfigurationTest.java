@@ -11,14 +11,13 @@ public class ConfigurationTest {
     private Configuration config;
 
     @Before
-    public void before(){
+    public void before() {
 
     }
 
 
     @Test
     public void canGetString() {
-
 
 
     }

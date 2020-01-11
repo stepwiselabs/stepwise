@@ -40,12 +40,12 @@ public final class Strings {
     /**
      * Reads the contents of the provided {@link InputStream} into a String. The
      * {@link InputStream} does not get closed.
-     * @param in - The {@link InputStream} to read from
      *
+     * @param in - The {@link InputStream} to read from
      * @return The contents from the {@link InputStream} as a {@link String}.
      * @throws ResourceAccessException when there is an IO error while reading
      */
-    public static String readContents(InputStream in){
+    public static String readContents(InputStream in) {
 
         StringBuilder textBuilder = new StringBuilder();
         try (Reader reader = new BufferedReader(new InputStreamReader
@@ -56,7 +56,7 @@ public final class Strings {
             }
             return textBuilder.toString();
 
-        } catch( IOException e ){
+        } catch (IOException e) {
             throw new ResourceAccessException(e, e.getMessage());
         }
     }
