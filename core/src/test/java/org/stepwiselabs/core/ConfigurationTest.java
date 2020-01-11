@@ -15,12 +15,9 @@ public class ConfigurationTest {
 
     }
 
-
     @Test
     public void canGetString() {
 
-
     }
-
 
 }
