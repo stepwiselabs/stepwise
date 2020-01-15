@@ -1,9 +1,10 @@
 package org.stepwiselabs.core.resource;
 
+import org.stepwiselabs.core.functions.ConsumerWithIOException;
+import org.stepwiselabs.core.functions.FunctionWithIOException;
+
 import java.io.InputStream;
 import java.nio.file.Path;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public interface ReadableResource {
 
@@ -11,9 +12,9 @@ public interface ReadableResource {
 
     InputStream open();
 
-    <T> T withResource(Function<InputStream, T> callback);
+    <T> T withResource(FunctionWithIOException<InputStream, T> callback);
 
-    void useResource(Consumer<InputStream> consumer);
+    void useResource(ConsumerWithIOException<InputStream> consumer);
 
     String readContents();
 

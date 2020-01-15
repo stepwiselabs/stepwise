@@ -3,7 +3,7 @@ package org.stepwiselabs.core.resource;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.stepwiselabs.core.FileUtils;
+import org.stepwiselabs.core.ResourceUtils;
 
 import java.nio.file.Path;
 
@@ -12,7 +12,7 @@ import static com.google.common.truth.Truth.assertThat;
 public class ReadableResourceLoaderTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ReadableResourceLoaderTest.class);
-    private static final Path readableFile = FileUtils.getResourcesRoot().resolve(
+    private static final Path readableFile = ResourceUtils.getResourcesRoot().resolve(
             "readableResourceTest/readable-resource.txt");
 
     private static final String CLASSPATH_RESOURCE_PATH = "classpath:readableResourceTest/readable-resource.txt";

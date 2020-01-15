@@ -2,11 +2,11 @@ package org.stepwiselabs.core.resource;
 
 import org.stepwiselabs.core.Strings;
 import org.stepwiselabs.core.exceptions.ResourceAccessException;
+import org.stepwiselabs.core.functions.ConsumerWithIOException;
+import org.stepwiselabs.core.functions.FunctionWithIOException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 abstract class AbstractReadableResource implements ReadableResource {
 
@@ -27,7 +27,7 @@ abstract class AbstractReadableResource implements ReadableResource {
     }
 
     @Override
-    public <T> T withResource(Function<InputStream, T> callback) {
+    public <T> T withResource(FunctionWithIOException<InputStream, T> callback) {
         try (InputStream in = open()) {
             return callback.apply(in);
         } catch (IOException e) {
@@ -39,7 +39,7 @@ abstract class AbstractReadableResource implements ReadableResource {
     }
 
     @Override
-    public void useResource(Consumer<InputStream> consumer) {
+    public void useResource(ConsumerWithIOException<InputStream> consumer) {
         try (InputStream in = open()) {
             consumer.accept(in);
         } catch (IOException e) {
