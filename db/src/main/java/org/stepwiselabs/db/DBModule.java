@@ -12,6 +12,7 @@ public class DBModule {
 
     @Provides
     public Jdbi provideJdbi(){
+        return null;
 
     }
 }
